@@ -1,0 +1,19 @@
+function listarPDFs() {
+  var idCarpeta = "1VJeqtpbApGR52CuOCQ3tmvcu-jpqYvHG"; // Reemplaza esto con el ID de tu carpeta
+  var hoja = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  hoja.clear();
+  hoja.appendRow(["Nombre del Archivo", "Enlace de Visualización", "Enlace de Descarga Directa"]);
+  
+  var carpeta = DriveApp.getFolderById(idCarpeta);
+  var archivos = carpeta.getFilesByType(MimeType.PDF);
+  
+  while (archivos.hasNext()) {
+    var archivo = archivos.next();
+    var nombre = archivo.getName();
+    var urlVer = archivo.getUrl();
+    // Genera el link que fuerza la descarga directa instantánea
+    var urlDescarga = "https://drive.google.com/uc?export=download&id=" + archivo.getId();
+    
+    hoja.appendRow([nombre, urlVer, urlDescarga]);
+  }
+}

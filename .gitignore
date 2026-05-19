@@ -1,0 +1,10 @@
+# Carpetas de salida
+recibos_separados/
+
+# Archivos de datos generados
+*.csv
+*.pdf
+
+# Entornos virtuales y Python
+__pycache__/
+venv/
