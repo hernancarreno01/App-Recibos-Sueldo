@@ -9,3 +9,7 @@ Este proyecto automatiza el procesamiento de recibos de sueldo en formato PDF.
 
 ## Instalación
 `pip install -r requirements.txt`
+
+## Uso
+Ejecuta el separador indicando el archivo PDF:
+`python separador.py archivo.pdf`

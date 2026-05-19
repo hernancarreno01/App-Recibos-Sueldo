@@ -1,3 +1,4 @@
+import sys
 import fitz  # PyMuPDF
 import re
 import csv
@@ -90,4 +91,6 @@ def extraer_empleados(pdf_entrada, csv_salida="empleados.csv"):
 
 if __name__ == "__main__":
 
-    extraer_empleados("04-2026.pdf");
+    # Permite usar: python capturaNombres.py nombre_archivo.pdf
+    archivo_input = sys.argv[1] if len(sys.argv) > 1 else "04-2026.pdf"
+    extraer_empleados(archivo_input)
