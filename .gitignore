@@ -1,5 +1,7 @@
 # Carpetas de salida
+# Carpeta de salida de PDFs
 recibos_separados/
+*.pdf
 
 # Archivos de datos generados
 *.csv
@@ -8,3 +10,4 @@ recibos_separados/
 # Entornos virtuales y Python
 __pycache__/
 venv/
+base_de_datos_wix.csv
